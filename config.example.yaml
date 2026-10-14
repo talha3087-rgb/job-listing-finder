@@ -1,0 +1,19 @@
+# Copy this file to config.yaml and edit it for your search.
+# Empty keywords or locations mean all titles or all locations respectively.
+keywords:
+  - software engineer
+  - data analyst
+locations: []
+# Use the exact board name in the employer's public careers URL.
+# These are example boards. Availability and listings can change.
+boards:
+  - company: Stripe
+    ats: greenhouse
+    slug: stripe
+  - company: Spotify
+    ats: lever
+    slug: spotify
+  - company: OpenAI
+    ats: ashby
+    slug: openai
+concurrency: 3

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "job-listing-finder"
+version = "0.1.0"
+description = "Find job listings across public employer boards, with configurable roles and locations"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["httpx>=0.28,<1", "pydantic>=2.10,<3", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+jobfinder = "jobfinder.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jobfinder*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
